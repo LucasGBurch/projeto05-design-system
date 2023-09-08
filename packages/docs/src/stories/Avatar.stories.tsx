@@ -9,6 +9,13 @@ export default {
     src: 'https://github.com/LucasGBurch.png',
     alt: 'Lucas Burch',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text', // Texto substituindo Obj
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
