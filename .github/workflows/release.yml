@@ -20,14 +20,9 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-          cache-dependency-path: 'packages/**/package-lock.json'
+          cache-dependency-path: '**/package-lock.json'
 
       - run: npm ci
-
-      - run: npm run build
-        env:
-          TURBO_TOKEN: LreRKouMwA4Pxt3MWUrySQ9U
-          TURBO_TEAM: Lucas Galarraga Burch
 
       - name: Publish to npm
         id: changesets
